@@ -1,6 +1,8 @@
 import json
-import requests
 from datetime import datetime
+
+import requests
+
 from config import TOKEN
 
 
@@ -56,7 +58,6 @@ def send_document(chat_id, file_id):
 
 
 def send_audio(chat_id, file_id):
-    """Audio yuborish"""
     url = f"{TG_BOT_URL}/sendAudio"
     params = {"chat_id": chat_id, "audio": file_id}
     requests.get(url, params=params)
